@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "Logistics Portal - Thunder Collection",
+    "schema": "https://www.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Alice\", \"email\": \"alice@example.com\", \"contact\": \"12345\", \"role\": \"USER\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Pickup Request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"userId\": 1, \"itemDescription\": \"Parcel\", \"pickupAddress\": \"Block A\", \"dropAddress\": \"Block B\", \"remarks\": \"Fragile\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/pickuprequests",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pickuprequests"
+          ]
+        }
+      }
+    }
+  ]
+}
